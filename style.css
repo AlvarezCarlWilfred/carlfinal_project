@@ -1,0 +1,89 @@
+:root {
+    --primary: #e63946;
+    --dark: #1d3557;
+    --light: #f1faee;
+    --gray: #ccc;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--dark);
+    color: white;
+    padding: 1rem 5%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#cart-count {
+    background: var(--primary);
+    padding: 2px 8px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product-img { font-size: 3rem; margin-bottom: 10px; }
+
+
+.cart-section {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.qty-controls button {
+    padding: 2px 8px;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+.btn-add { background: var(--dark); color: white; padding: 10px; width: 100%; }
+.btn-add:disabled { background: var(--gray); cursor: not-allowed; }
+.btn-clear { background: #666; color: white; padding: 8px; }
+.btn-checkout { background: #2a9d8f; color: white; padding: 8px; }
+.btn-remove { background: var(--primary); color: white; font-size: 0.8rem; }
